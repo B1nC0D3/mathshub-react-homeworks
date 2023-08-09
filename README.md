@@ -1,3 +1,2 @@
-# mathshub-react-homeworks
-
-Здесь будут домашние задания для курса React 2023 :)
+# My first react app
+Мое первое приложение-резюме на реакте.
