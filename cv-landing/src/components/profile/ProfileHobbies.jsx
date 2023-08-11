@@ -1,13 +1,12 @@
-import React from "react";
-
+import React from 'react';
 
 function ProfileHobbies() {
-    return (
-        <div>
-            <span>Хобби: </span>
-            <span>Гитара, программирование, различные игры</span>
-        </div>
-    )
+  return (
+    <div>
+      <span>Хобби: </span>
+      <span>Гитара, программирование, различные игры</span>
+    </div>
+  );
 }
 
-export default ProfileHobbies
+export default ProfileHobbies;
