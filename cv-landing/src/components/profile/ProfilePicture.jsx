@@ -1,9 +1,10 @@
 import React from "react";
-import profile_pic from "../../imgs/profile_pic.jpg"
-function ProfilePicture() {
+
+
+function ProfilePicture({userImage}) {
     return(
         <div>
-            <img src={profile_pic} alt="profile pic"/>
+            <img src={userImage} alt="profile pic"/>
         </div>
     )
 }

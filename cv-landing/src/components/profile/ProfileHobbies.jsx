@@ -1,11 +1,11 @@
 import React from "react";
 
 
-function ProfileHobbies() {
+function ProfileHobbies({userHobbies}) {
     return (
         <div>
             <span>Хобби: </span>
-            <span>Гитара, программирование, различные игры</span>
+            <span>{userHobbies}</span>
         </div>
     )
 }

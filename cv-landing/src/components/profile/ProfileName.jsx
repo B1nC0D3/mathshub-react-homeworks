@@ -1,10 +1,10 @@
 import React from "react";
 
-function ProfileName() {
+function ProfileName({userName}) {
     return (
         <div>
             <span>Имя: </span>
-            <span>Кирилл</span>
+            <span>{userName}</span>
         </div>
     )
 }
