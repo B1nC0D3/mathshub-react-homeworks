@@ -3,9 +3,9 @@ import React from 'react';
 function ProfileBio({userBio}) {
   return (
     <div>
-      <p>
+      <span>
         {userBio}
-      </p>
+      </span>
     </div>
   );
 }

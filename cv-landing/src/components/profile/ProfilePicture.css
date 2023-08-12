@@ -1,0 +1,7 @@
+.profile__picture {
+    height: 300px;
+}
+
+.profile__picture img {
+    height: 100%;
+}
