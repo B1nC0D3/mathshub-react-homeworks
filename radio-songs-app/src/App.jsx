@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header'
+import SongList from './components/songs/SongList'
+import SongRequestForm from './components/songs/SongRequestForm'
 
 function App() {
     const songs = [
@@ -42,60 +45,6 @@ function App() {
                 <SongRequestForm />
                 <SongList songs={songs} />
             </div>
-        </div>
-    );
-}
-
-function Header() {
-    return (
-        <div className='header'>
-            <h1>Заявки на Радио</h1>
-            <p>Отправляйте заявку и мы сыграем вашу любимую песню!</p>
-        </div>
-    );
-}
-
-function SongRequestForm() {
-    return (
-        <form className='song-request-form'>
-            <input type='text' placeholder='Название песни' />
-            <input type='text' placeholder='Исполнитель' />
-            <select>
-                <option value='Поп'>Поп</option>
-                <option value='Рок'>Рок</option>
-                <option value='Джаз'>Джаз</option>
-                <option value='Блюз'>Блюз</option>
-                <option value='Рэп'>Рэп</option>
-                <option value='Шансон'>Шансон</option>
-                <option value='Электроника'>Электроника</option>
-                <option value='Кантри'>Кантри</option>
-                <option value='Регги'>Регги</option>
-                <option value='Фолк'>Фолк</option>
-                <option value='Классика'>Классика</option>
-            </select>
-            <button type='submit'>Отправить</button>
-        </form>
-    );
-}
-
-function SongList({ songs }) {
-    return (
-        <div className='song-list'>
-            <SongItem song={songs[0]} />
-            <SongItem song={songs[1]} />
-            <SongItem song={songs[2]} />
-            <SongItem song={songs[3]} />
-            <SongItem song={songs[4]} />
-        </div>
-    );
-}
-
-function SongItem({ song }) {
-    return (
-        <div className='song-item'>
-            <span>{song.name}</span>
-            <span>{song.artist}</span>
-            <span>{song.genre}</span>
         </div>
     );
 }
