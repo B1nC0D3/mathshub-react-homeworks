@@ -1,11 +1,44 @@
-import React from "react";
+import React, {useState} from "react";
 
-function SongRequestForm() {
+function SongRequestForm({OnNewSong}) {
+    const [enteredSongName, setSongName] = useState('')
+    const [enteredArtistName, setArtistName] = useState('')
+    const [enteredGenre, setGenre] = useState('Поп')
+
+    const NameChangeHandler = (e) => {
+        setSongName(e.target.value)
+    }
+
+    const ArtistNameChangeHandler = (e) => {
+        setArtistName(e.target.value)
+    }
+
+    const GenreChangeHandler = (e) => {
+        setGenre(e.target.value)
+    }
+
+    const SubmitHandler = (e) => {
+        e.preventDefault()
+        const newSong = {
+            'name': enteredSongName,
+            'artist': enteredArtistName,
+            'genre': enteredGenre
+        }
+        OnNewSong(newSong)
+        setGenre('Поп')
+        setSongName('')
+        setArtistName('')
+    }
+
     return (
-        <form className='song-request-form'>
-            <input type='text' placeholder='Название песни' />
-            <input type='text' placeholder='Исполнитель' />
-            <select>
+        <form className='song-request-form' onSubmit={SubmitHandler}>
+            <input type='text' placeholder='Название песни'
+                   value={enteredSongName}
+                   onChange={NameChangeHandler}/>
+            <input type='text' placeholder='Исполнитель'
+                   value={enteredArtistName}
+                   onChange={ArtistNameChangeHandler}/>
+            <select value={enteredGenre} onChange={GenreChangeHandler}>
                 <option value='Поп'>Поп</option>
                 <option value='Рок'>Рок</option>
                 <option value='Джаз'>Джаз</option>
