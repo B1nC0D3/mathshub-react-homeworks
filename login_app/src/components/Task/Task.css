@@ -1,0 +1,37 @@
+.completed {
+    background-color: #006d00;
+    padding: 0.75rem 3.5rem;
+    font-size: 1.15rem;
+    border-radius: 30px;
+}
+
+
+.task-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+}
+
+.task-wrapper > * {
+    display: flex;
+}
+
+.task__content_wrapper {
+    flex-direction: column;
+}
+
+.task__content_wrapper h2 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.task__content_wrapper p {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.task__button_wrapper {
+    justify-content: flex-end;
+}

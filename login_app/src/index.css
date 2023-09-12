@@ -1,0 +1,29 @@
+:root {
+  --color-toggle-light: yellow;
+  --color-toggle-dark: bisque;
+}
+
+.dark-theme {
+  background: #2f2f2f;
+  color: #ccc;
+}
+
+.light-theme {
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 6rem;
+}
