@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 
 import './Navigation.css';
 import AuthContext from '../../context/auth-context';
+import ThemeToggle from '../UI/ThemeToggle/ThemeToggle'
 
 function Navigation() {
   const contextData = useContext(AuthContext);
@@ -25,6 +26,9 @@ function Navigation() {
             <button onClick={contextData.onLogout}>Logout</button>
           </li>
         )}
+          <li className='switch'>
+              <ThemeToggle/>
+          </li>
       </ul>
     </nav>
   );

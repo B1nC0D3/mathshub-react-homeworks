@@ -29,6 +29,8 @@ function App() {
     setIsLoggedIn(false);
   };
 
+  const checkUserTheme = () => localStorage.getItem('theme') || 'light-theme'
+
   return (
     <AuthContext.Provider
       value={{
